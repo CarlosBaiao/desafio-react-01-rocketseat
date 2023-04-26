@@ -1,0 +1,106 @@
+.tasks {
+  max-width: 46rem;
+  width: 100%;
+}
+
+.addTask {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: calc(0px - 1.5rem - 4px);
+}
+
+.addTask input {
+  width: 100%;
+  height: 3.375rem;
+  border-radius: 8px;
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray--700);
+  padding-inline: 1rem;
+}
+
+.addTask button {
+  background: var(--blue-500);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding-inline: 1rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.addTask button:hover {
+  background: var(--blue-300);
+}
+
+.addTask button svg {
+  font-weight: 700;
+}
+
+.taskCount {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.tasksCreated,
+.completedTasks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tasksCreated p,
+.completedTasks p {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 17px;
+}
+
+.tasksCreated p {
+  color: var(--blue-300);
+}
+
+.completedTasks p {
+  color: var(--purple-300);
+}
+
+.tasksCreated span,
+.completedTasks span {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 17px;
+  padding: 0.125rem 0.5rem;
+  border-radius: 999px;
+  background: var(--gray-400);
+  color: var(--gray-200);
+}
+
+.taskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.emptyTasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid var(--gray-400);
+  padding-top: 4rem;
+  border-radius: 8px;
+}
+
+.emptyTasks p {
+  padding-top: 1rem;
+  font-weight: 700;
+}

@@ -1,0 +1,86 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  position: relative;
+}
+
+.task p {
+  font-size: 0.875rem;
+  margin-inline: 1.375rem;
+  align-items: flex-start;
+}
+
+.removeItem {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.1s color 0.1s;
+}
+
+.removeItem:hover {
+  background: var(--gray-400);
+  border-radius: 4px;
+  color: var(--red-500);
+}
+
+label {
+  background: var(--gray-500);
+  border: 2px solid var(--blue-300);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1.125rem;
+  left: 1.25rem;
+  position: absolute;
+  top: 1.25rem;
+  width: 1.125rem;
+}
+
+label:hover {
+  border: 2px solid var(--blue-300);
+ background: var(--blue-500);
+  
+}
+
+label::after {
+  border: 1.5px solid var(--gray-100);
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 0.3125rem;
+  left: 0.125rem;
+  opacity: 0;
+  position: absolute;
+  top: 0.125rem;
+  transform: rotate(-45deg);
+  width: 0.5rem;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked ~ p {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: var(--purple-500);
+  border-color: var(--purple-500);
+}
+
+input[type="checkbox"]:checked + label:hover {
+  background-color: var(--purple-300);
+  border-color: var(--purple-300);
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
